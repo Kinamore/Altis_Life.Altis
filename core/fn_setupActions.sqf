@@ -44,10 +44,10 @@ switch (playerSide) do
 		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["robbed",FALSE]) ']];
 			//Rape person
 		life_actions = life_actions + [player addAction["Rape Person",life_fnc_rapeAction,"",0,false,false,"",'
-		!isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && player distance cursorTarget < 3.5 && (cursorTarget getVariable ["restrained",false]) && (cursorTarget getVariable ["isCivRestrained",false]) && !(cursorTarget getVariable["raped",FALSE]) ']];
+		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["raped",FALSE]) ']];
 			//Torture person
 		life_actions = life_actions + [player addAction["Torture Person",life_fnc_TorturePlayer,"",0,false,false,"",'
-		!isNull cursorTarget && cursorTarget isKindOf "Man" && (isPlayer cursorTarget) && player distance cursorTarget < 3.5 && (cursorTarget getVariable ["restrained",false]) && (cursorTarget getVariable ["isCivRestrained",false]) && !(cursorTarget getVariable["tortured",FALSE]) ']];
+		!isNull cursorTarget && player distance cursorTarget < 3.5 && isPlayer cursorTarget && animationState cursorTarget in ["Incapacitated","amovpercmstpsnonwnondnon_amovpercmstpssurwnondnon"] && !(cursorTarget getVariable["tortured",FALSE]) ']];
 		
         //Houses
         life_actions = life_actions + [player addAction["<t color='#FF0000'>Toggle House Locks</t>",life_fnc_lockHouse,cursorTarget,10,false,false,"",

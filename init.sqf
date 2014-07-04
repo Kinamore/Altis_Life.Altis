@@ -29,6 +29,7 @@ if(X_Client) then
 [] execVM "KRON_Strings.sqf";
 [] execVM "addons\scripts\script_tearGas.sqf";
 [] execVM "addons\scripts\script_tearGasShell.sqf";
+[] execVM "name_your_file.sqf";
 if(!StartProgress) then
 {
 	[8,true,true,12] execFSM "core\fsm\timeModule.fsm";
