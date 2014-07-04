@@ -1,0 +1,167 @@
+author = "Tonic";
+onLoadName = "Altis Life RPG v3.1.3";
+onLoadMission = "A RPG game mode developed by Tonic/Edited by Silverado";
+joinUnassigned = 0;
+respawn = BASE;
+respawndelay = 5;
+disabledAI = true;
+disableChannels[]={0,1,2};
+enableDebugConsole = 1;
+respawnDialog = 0;
+
+class Header
+{
+	gameType = RPG;
+	minPlayers = 1;
+	maxPlayers = 200;
+};
+
+wreckLimit = 3;
+wreckRemovalMinTime = 30;
+wreckRemovalMaxTime = 120;
+corpseLimit = 150;
+corpseRemovalMinTime = 30;
+corpseRemovalMaxTime = 120;
+
+#include "dialog\MasterHandler.h"
+
+class RscTitles
+{
+	#include "dialog\player_hud.hpp"
+	#include "dialog\progress.hpp"
+};
+
+class CfgFunctions
+{
+	#include "Functions.h"
+};
+
+class CfgSounds
+{
+  sounds[] = {};
+class Flashbang
+  {
+    name = "Flashbang";
+    sound[] = {"\sounds\flashbang.ogg", 1.0, 1};
+    titles[] = {};
+  };
+  class SirenLong
+  {
+    name = "SirenLong";
+    sound[] = {"\sounds\Siren_Long.ogg", 1.0, 1};
+    titles[] = {};
+  };
+    class tazersound
+  {
+    name = "Tazersound";
+    sound[] = {"\sounds\tazer.ogg", 0.25, 1};
+    titles[] = {};
+  };
+};
+
+class CfgDebriefing
+{
+	class NotWhitelisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are not white-listed to use this slot";
+		description = "You are not allowed to use this slot because you do not have the appropriate permissions, try Civilian.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+		class SpyGlass
+ 	{
+ 		title = "The anti-cheat sees you";
+ 		subTitle = "You were detected by the anti-cheat system";
+ 		description = "You were detected for cheating and have been reported to the server. Please Remove your addons.";
+ 		pictureBackground = "";
+		picture = "";
+ 		pictureColor[] = {0,0.3,0.6,1};
+ 	};
+	class Blacklisted
+	{
+		title = "Mission Failed";
+		subtitle = "You are blacklisted from cops";
+		description = "You are not allowed to be a cop due to previous actions and the admins have removed you from being a cop.";
+		pictureBackground = "";
+		picture = "";
+		pictureColor[] = {0,0.3,0.6,1};
+	};
+	
+};
+
+class CfgNotifications
+{
+	class MedicalRequestEmerg
+	{
+		title = "EMS Requested";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 5;
+		priority = 7;
+	};
+	
+	class DeliveryAssigned
+	{
+		title = "Delivery Job Accepted";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcon_ca.paa";
+		description = "%1";
+		duration = 10;
+		priority = 7;
+	};
+	
+	class DeliveryFailed
+	{
+		title = "Delivery Job Failed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskiconfailed_ca.paa";
+		description = "%1";
+		duration = 7;
+		priority = 7;
+	};
+	
+	class DeliverySucceeded
+	{
+		title = "Delivery Job Completed";
+		iconPicture = "\A3\ui_f\data\map\mapcontrol\taskIcondone_ca.paa";
+		description = "%1";
+		duration = 6;
+		priority = 6;
+	};
+	
+	class TextMessage
+	{
+		title = "Received A Text Message";
+		iconPicture = "icons\messagenew.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+
+	class PoliceDispatch
+	{
+		title = "911 Dispatch Center";
+		iconPicture = "icons\messagepolice.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class AdminDispatch
+	{
+		title = "Admin Dispatch Center";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 6;
+	};
+	
+	class AdminMessage
+	{
+		title = "Admin Message";
+		iconPicture = "icons\messageadmin.paa";
+		description = "%1";
+		duration = 10;
+		priority = 5;
+	};
+};
