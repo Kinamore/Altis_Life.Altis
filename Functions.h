@@ -128,7 +128,7 @@ class Life_Client_Core
 		class rapeAction {};
 		class rapeme {};
 		class rapefail {};
-		class removeWeaponAction {}; //remove weapons
+		class removeWeaponAction {};
 	};
 	
 	class Config
@@ -266,6 +266,7 @@ class Life_Client_Core
 		class zoneCreator {};
 		class handleDowned {};
 		class removeWeapons {};
+
 	};
 	
 	class Vehicle

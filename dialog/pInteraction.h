@@ -267,7 +267,7 @@ class vInteraction_Menu
 			w = 0.24;
 			h = 0.038;
 		};
-class ButtonSeven : life_RscButtonMenu
+		class ButtonSeven : life_RscButtonMenu
 		{
 			idc = 37456;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
@@ -278,6 +278,8 @@ class ButtonSeven : life_RscButtonMenu
 			w = 0.24;
 			h = 0.038;
 		};
+		class ButtonEight : life_RscButtonMenu
+		{
 			idc = 37457;
 			colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", 0.5};
 			text = "";
